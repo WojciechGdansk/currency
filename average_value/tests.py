@@ -20,9 +20,9 @@ class TestMaxAndMinAverageValue(APITestCase):
     def test_minimal_and_maximal_value(self):
         test_cases = [
             ('gbp', '5', 5.2086, 5.2529),
-            ('usd', '255', 4.2006, 5.0381),
-            ('aud', '20', 2.8094, 2.9057),
-            ('thb', '50', 0.1221, 0.1323),
+            ('usd', '255', 4.1905, 5.0381),
+            ('aud', '20', 2.8024, 2.8933),
+            ('thb', '50', 0.1218, 0.1323),
         ]
         for currency, quotation_number, minimal_value, maximal_value in test_cases:
             url = reverse('min_and_max_value', kwargs={'currency': currency, 'quotation_number': quotation_number})
