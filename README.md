@@ -149,6 +149,6 @@ Returns
 To run tests, run the following command
 
 ```
-  pyton manage.py test
+  python manage.py test
 ```
 
