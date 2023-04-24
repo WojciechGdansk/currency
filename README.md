@@ -16,7 +16,7 @@ Exchange rate for weekends and holidays is not available
 
 Install packages from requirements.txt -> pip install -r requirements.txt
 
-Create envs directory and .env file inside.
+In envs directory change name of .env-example file to .env and add your secret key
 ```
 DEBUG=1
 SECRET_KEY='YOUR SERCET KEY'
