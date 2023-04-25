@@ -127,7 +127,7 @@ For example
 http://localhost:8000/difference/jpy/50
 ```
 
-Returns that Japanese Yen(JPY) highest difference between buy and sell price within last 50 quotations is 0.0007
+Returns that Japanese Yen(JPY) the highest difference between buy and sell price within last 50 quotations is 0.0007
 
 ```
 {
