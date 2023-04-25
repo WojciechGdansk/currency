@@ -34,12 +34,16 @@ python manage.py runserver
 
 ### Exchange rate endpoint
 
+Endpoint returns exchange rate for currency and date selected by user
+
+For example:
+
 ```
 http://localhost:8000/exchange/gbp/2023-04-21/
 
 ```
 
-Returns
+Returns exchange rate for british pound(GBP) in 2023-04-21
 
 ```
 {
@@ -51,7 +55,7 @@ Returns
 }
 ```
 
-Selected date is weekend, holiday, currency doesn't exist, date format is incorrect or date isn't from past:
+If selected date is weekend, holiday, currency doesn't exist, date format is incorrect or date isn't from past:
 
 
 ```
@@ -59,7 +63,7 @@ http://localhost:8000/exchange/gbp/2023-04-23/
 
 ```
 
-Returns
+Endpoint will return information that provided data was incorrect
 
 ```
 {
@@ -68,6 +72,8 @@ Returns
 ```
 
 ### The lowest and highest exchange rate within last N quotations
+
+To check the lowest and the highest exchange rate for selected currency within N number of quotations hit to endpoint:
 
 ```
 http://localhost:8000/min_and_max_value/currency/N
@@ -79,7 +85,7 @@ For example
 http://localhost:8000/min_and_max_value/usd/50
 ```
 
-Returns
+Returns minimal and maximal value of exchange rate for USD within last 50 quotations
 
 ```
 {
@@ -107,7 +113,9 @@ Returns
 ```
 
 
-### The greatest difference between buy and sell price withi last N quotations
+### The greatest difference between buy and sell price within last N quotations
+
+Endpoint returns the highest difference between buy and sell price within last N number of quotations
 
 ```
 http://localhost:8000/difference/currency/N
@@ -119,7 +127,7 @@ For example
 http://localhost:8000/difference/jpy/50
 ```
 
-Returns
+Returns that Japanese Yen(JPY) highest difference between buy and sell price within last 50 quotations is 0.0007
 
 ```
 {
@@ -149,6 +157,6 @@ Returns
 To run tests, run the following command
 
 ```
-  python manage.py test
+  pyton manage.py test
 ```
 
