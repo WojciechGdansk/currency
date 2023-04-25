@@ -14,11 +14,14 @@ Exchange rate for weekends and holidays is not available
 
 ## Installation
 
-Install packages from requirements.txt -> pip install -r requirements.txt
+Install packages from requirements.txt
+```
+pip install -r requirements.txt
+```
 
 In envs directory change name of .env-example file to .env and add your secret key
 ```
-DEBUG=1
+DEBUG=0
 SECRET_KEY='YOUR SERCET KEY'
 DJANGO_ALLOWED_HOSTS='localhost 127.0.0.1'
 ```
